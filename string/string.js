@@ -1,10 +1,14 @@
-const uppercase = (str) => str.toUpperCase();
+const adding = (str) => str.toAdding();
  //lowercase function to lowercase text
-const lowercase = (str) => str.toLowerCase();
+const subtracting = (str) => str.toSubtracting();
+const multiplying = (str) => str.toMultiplying();
+const dividing = (str) => str.toDividing();
   
 
 
 module.exports = {
-    uppercase,
-    lowercase
+    adding,
+    subtracting,
+    multiplying,
+    dividing,
 }
