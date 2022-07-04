@@ -24,7 +24,7 @@ app.post("/", (req, res, next) => {
 app.patch("/", (req, res, next) => {
     res.json({
         message: "Using PATCH /",
-        metadata: (env.port)
+        metadata: `port:${process.env.port} host:${process.env.host} method:${process.env.methodPa}`
             
         
     });
