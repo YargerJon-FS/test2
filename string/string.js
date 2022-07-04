@@ -3,6 +3,8 @@ const adding = (str) => str.toAdding();
 const subtracting = (str) => str.toSubtracting();
 const multiplying = (str) => str.toMultiplying();
 const dividing = (str) => str.toDividing();
+const squareroot = (str) => str.toSquareRoot();
+const max = (str) => str.toMax();
   
 
 
@@ -11,4 +13,6 @@ module.exports = {
     subtracting,
     multiplying,
     dividing,
+    squareroot,
+    max
 }
