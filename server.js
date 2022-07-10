@@ -5,9 +5,11 @@ const app = express();
 app.get("/", (req, res, next) => {
     res.json({
         message: "Using GET /",
-        metadata: {
+        metadata: `Port: ${process.env.port},
+        Host: ${process.env.host}`
             
-        }
+            
+        
     });
 });
 
