@@ -5,8 +5,22 @@ const app = express();
 app.get("/", (req, res, next) => {
     res.json({
         message: "Using GET /",
-        metadata: `Port: ${process.env.port},
-        Host: ${process.env.host}`
+        metadata: {
+            host: req.hostname,
+            method: req.method
+        }
+            
+            
+        
+    });
+});
+app.get("/:_id", (req, res, next) => {
+    res.json({
+        message: "Using GET by Id",
+        metadata: {
+            host: req.hostname,
+            method: req.method
+        }
             
             
         
@@ -18,7 +32,8 @@ app.post("/", (req, res, next) => {
     res.json({
         message: "Using POST /",
         metadata: {
-            
+            host: req.hostname,
+            method: req.method
         }
     });
 });
@@ -26,8 +41,10 @@ app.post("/", (req, res, next) => {
 app.patch("/", (req, res, next) => {
     res.json({
         message: "Using PATCH /",
-        metadata: `port:${process.env.port} host:${process.env.host} method:${process.env.methodPa}`
-            
+        metadata: {
+            host: req.hostname,
+            method: req.method
+        }    
         
     });
 });
@@ -36,7 +53,8 @@ app.delete("/", (req, res, next) => {
     res.json({
         message: "Using delete /",
         metadata: {
-            
+            host: req.hostname,
+            method: req.method
         }
     });
 });
